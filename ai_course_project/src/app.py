@@ -1,6 +1,8 @@
 import streamlit as st
 import os
 import sys
+from sentence_transformers import SentenceTransformer
+embeddings = SentenceTransformer('all-MiniLM-L6-v2')
 
 # 添加 src 目录到路径（云端部署需要）
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
